@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    /* Выровнять заголовок и меню по краям */
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.logo {
+    color: white;
+}
+
+/* Шапка */
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #838383;
+}
+
+#hero {
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.5em;
+}
+
+#services {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    /* Добавлен фон для раздела */
+}
+
+#services h3 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #333;
+    /* Цвет заголовка */
+}
+
+.services-grid {
+    display: flex;
+    /* Используйте flexbox для выравнивания */
+    flex-wrap: wrap;
+    /* Позволяет переносить блоки на следующую строку */
+}
+
+.service {
+    flex: 1;
+    /* Позволяет блокам занимать равное пространство */
+    margin: 10px;
+    /* Отступ между блоками */
+    padding: 15px;
+    /* Внутренний отступ */
+    border: 1px solid #ddd;
+    /* Граница блока */
+    border-radius: 10px;
+    /* Скругление углов */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Тень */
+    display: flex;
+    /* Позволяет использовать flexbox внутри блока */
+    flex-direction: column;
+    /* Вертикальная ориентация элементов внутри блока */
+}
+
+.service p {
+    flex-grow: 1;
+    /* Позволяет текстовому блоку занимать все доступное пространство */
+    margin-bottom: 10px;
+    /* Отступ внизу текста */
+}
+
+.service-image {
+    max-width: 100%;
+    /* Ширина изображения не больше ширины блока */
+    height: 200px;
+    /* Установите фиксированную высоту для изображений */
+    object-fit: cover;
+    /* Сохраняет пропорции изображения, обрезая при необходимости */
+    align-self: center;
+    /* Центрирует изображение по горизонтали */
+    margin-top: auto;
+    /* Отодвигает изображение к нижней части блока */
+}
+
+#contact {
+    padding: 40px 0;
+}
+
+#contact h3 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+#about {
+    border-radius: 15px;
+    margin-top: 50px;
+    background-color: white;
+    /* Белый фон */
+    padding: 40px;
+    /* Отступы внутри контейнера */
+    text-align: center;
+    /* Центрирование текста */
+}
+
+#about h3 {
+    font-size: 2em;
+    /* Нормальный размер заголовка */
+    margin-bottom: 20px;
+    /* Отступ снизу для заголовка */
+}
+
+#about p {
+    font-size: 1.2em;
+    /* Размер текста */
+    line-height: 1.5;
+    /* Межстрочный интервал для улучшения читаемости */
+    max-width: 800px;
+    /* Максимальная ширина текста для лучшего восприятия */
+    margin: 0 auto;
+    /* Центрирование текста в контейнере */
+}
+
+#portfolio {
+    padding: 40px;
+    /* Отступы внутри контейнера */
+    text-align: center;
+    /* Центрирование текста */
+}
+
+#portfolio h3 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+}
+
+swiper-container {
+    width: 100%;
+    /* Максимальная ширина слайдера для лучшего отображения */
+    margin: 0 auto;
+    /* Центрирование слайдера */
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Скрываем часть изображения, выходящую за пределы */
+    width: 100%;
+    /* Ширина слайда */
+    height: 500px;
+    /* Фиксированная высота для всех слайдов */
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    /* Ширина изображения 100% от слайда */
+    height: 100%;
+    /* Высота изображения 100% от слайда */
+    object-fit: cover;
+    /* Сохранение пропорций изображения */
+    object-position: center;
+    /* Центрируем изображение внутри слайда */
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+    }
+
+    #hero h2 {
+        font-size: 2.2em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
+
+    .services-grid {
+        flex-direction: column;
+    }
+
+    .service {
+        margin-bottom: 20px;
+    }
+
+    #contact h3 {
+        font-size: 1.8em;
+    }
+
+    footer p {
+        font-size: 1em;
+    }
+}
